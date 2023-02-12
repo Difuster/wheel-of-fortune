@@ -1,0 +1,51 @@
+.Menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.Menu p {
+  list-style-type: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  color: #FAC269;
+  text-shadow: -1px -1px 0px #B46E00;
+  border: 4px solid #FAC269;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 22px;
+  margin-bottom: 15px;
+  margin-top: 0;
+  background: linear-gradient(327.68deg, #588DD8 -2.66%, #324FA5 80.63%);
+  box-shadow: inset 0px 4px 4px #400000;
+}
+
+.Menu button {
+  font-family: 'Luckiest Guy';
+  list-style-type: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  color: #FAC269;
+  text-shadow: -1px -1px 0px #B46E00;
+  border: 4px solid #FAC269;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 22px;
+  margin-top: 0;
+  background: linear-gradient(241.78deg, #BC0000 27.02%, #8B0000 82.05%);
+  box-shadow: 0 0 0 60px #930000 inset, .1em .2em .2em #ae0800;
+  cursor: pointer;
+}
+
+.Menu button:active {
+  top: .1em;
+  left: .1em;
+  box-shadow: 0 0 0 60px #930000 inset;
+}

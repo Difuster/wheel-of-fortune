@@ -1,0 +1,67 @@
+.container {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+  margin-bottom: 40px;
+  background: linear-gradient(180deg, #3496DF 11.29%, #016CB9 94.98%);
+  box-shadow: inset 1px 5px 4px #1B379F;
+  border-radius: 15px;
+}
+
+.container .arrow {
+  position: absolute;
+  z-index: 10;
+  top: 5px;
+  width: 11.3px;
+  height: 22.6px;
+  background-image: url(../../assets/images/arrow.png);
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+.container .wheel {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  outline: 10px solid #c0c9c7;
+  border: solid 3px #cc3;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 4s ease-out;
+}
+
+.container .wheel .number {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  transform-origin: bottom right;
+  transform: rotate(calc(45deg * var(--i)));
+  clip-path: polygon(0 0, 59% 0, 100% 100%, 0 58%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .wheel .number .jackpot {
+  margin-top: 15px;
+  margin-left: 20px;
+  transform: rotate(45deg);
+}
+
+.yellow {
+  background: linear-gradient(to bottom, #de9000, #fdd514);
+}
+
+.black {
+  background: linear-gradient(to bottom, #333135, #2d2d2b);
+}
+
+.container .wheel .number span {
+  position: relative;
+  color: #eae6ec;
+  transform: rotate(-45deg);
+}

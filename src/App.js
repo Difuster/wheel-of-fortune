@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import React, {useEffect} from 'react';
+import bridge from '@vkontakte/vk-bridge';
 import './App.css';
+import { AppContextProvider } from './components/context/appContext';
+import Main from './Main';
 
 function App() {
+  useEffect(() => {
+    bridge.send("VKWebAppInit", {});
+    bridge.send('VKWebAppGetLaunchParams')
+      .then((data) => {
+        console.log('VKWebAppGetLaunchParams');
+        if (data.vk_app_id) {
+          console.log(data);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContextProvider>
+      <div className="App-wrapper">
+        <Main />
+      </div>
+    </AppContextProvider>
   );
 }
 

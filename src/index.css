@@ -1,13 +1,21 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'Luckiest Guy';
+  src: url('assets/fonts/LuckiestGuy/LuckiestGuy-Regular.ttf');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url('assets/fonts/GothamPro/gothampro.ttf');
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'Luckiest Guy', 'Comic Sans MS', 'Roboto', sans-serif;
+  font-size: 20px;
+  box-sizing: border-box;
+  background: #001583;
+  backdrop-filter: blur(16.3097px);
 }
